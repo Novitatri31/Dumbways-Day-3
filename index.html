@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="asset/css/style.css">
+    </head>
+    <body>
+    <!--NAVBAR START-->
+        <nav>
+            <div class="left-side">
+                <a href="index (2).html"><img src="asset/img/logo.png" alt="Dumbways logo">
+                </a>
+                
+                <ol>
+                    <li>
+                    <a href="asset/index.html">Home</a>
+                    </li>
+                    <li>
+                    <a href="#">Blog</a>
+                    </li>
+    
+                </ol>
+            </div>
+            <div class="right-side">
+                <a href="index.html">Contact me</a>
+
+            </div>
+            
+        </nav>
+    <!--NAVBAR END-->
+
+    <!--FORM CONTACT START-->
+    <div class="form-contact">
+        <div class="container-form">
+        <form>
+            <div>
+                <label for="name">Nama</label>
+                <input id="name" type="text"> <!-- required dibutuhkan agar tidak terjadi kekosongan kolom ketika di submit dan property selected harus dikosongkan-->
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="youremail@gmai.com"> <!--placeholder digunakan sebagai text petunjuk dalam pengisian-->
+            </div>
+            <div>
+                <label for="phone" >Phone number</label>
+                <input id="phone" type="phone" pattern [0-9]{12}> <!--Pattern digunakan sebagai batasan yang diisi pada kolom baik itu alphabetic ataupun numeric dan harus jelas berapa digit pada angka tersebut-->
+            </div>
+            <div>
+                <label for="subject">Subject</label>
+                <select id="subject">
+                    <option hidden></option> <!--property hidden digunakan ketika mengosongkan tampilan awal pada option-->
+                    <option value="Front end">Front end</option>
+                    <option value="Back end">Back end</option> <!--value digunakan untu menampilkan nilai pada console-->
+                    <option value="Fullstack">Fullstack</option> <!--Property selected digunakan untuk menampilkan tampilan awal (meskipun bukan urutan yang pertama) pada option-->
+                </select>
+            </div>
+            <div>
+                <label for="message">Your message</label>
+                <textarea id="message"></textarea> <!--style none digunakan agar kolom input text area tidak bisa dirubah menggunakan panah-->
+            </div>
+        
+            <button type="submit"onclick="showData(event)">Submit</button> <!--pada atribut js on click dengan elemen alert(``) maka perlu di perhatikan untuk tanda petik di dalamnya menggunakan backtick, prompt digunakan untuk menampilkan kotak input sbg pemberitahuan -->
+            <!--<a href="mailto:"></a> digunakan untuk menghubungkan ke email receiver-->
+
+        </form>
+        </div>
+    </div>
+    <script src="form.js"></script>
+<!--FORM CONTACT END-->
+    </body>
+</html>
